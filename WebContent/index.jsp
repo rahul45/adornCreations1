@@ -5,13 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home</title>
-<link type="css/text"  >
+<link rel="stylesheet" type="text/css" href="ui_adornCreations/common_layout/styles/common_style.css">
 </head>
 <body>
-
-	<div>
+	<!-- header start from here -->
+	<div class="header">
 		<%@ include file="/WEB-INF/includes/menubar.jsp" %>
 	</div>
-	hello world !!
+	<div>container</div>
 </body>
 </html>
