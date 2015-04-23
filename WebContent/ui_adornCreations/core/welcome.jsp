@@ -4,15 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home</title>
-<link type="css/text"  >
+<title>Insert title here</title>
 </head>
 <body>
-
-	<div>
-		<%@ include file="/WEB-INF/includes/menubar.jsp" %>
-		<%@ include file="/ui_adornCreations/core/index.jsp" %>
-	</div>
-	hello world !!
+Registration is Successful.
+Please Login Here <a href='login.jsp'>Go to Login</a>
 </body>
 </html>
