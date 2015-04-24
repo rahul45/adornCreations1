@@ -11,8 +11,9 @@
 	<!-- header start from here -->
 	<div class="header">
 		<%@ include file="/WEB-INF/includes/menubar.jsp" %>
-		<%@ include file="/ui_adornCreations/core/index.jsp" %>
+		
 	</div>
 	<div>container</div>
+	<div id="slidshowImagesDiv"><%@ include file="/ui_adornCreations/core/home.jsp" %></div>
 </body>
 </html>
