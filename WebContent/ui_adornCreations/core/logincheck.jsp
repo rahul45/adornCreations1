@@ -4,6 +4,11 @@
 <jsp:useBean id="userObj" class="users.User" scope="session"/>
 
 <jsp:setProperty name="userObj" property="*"/> 
+
+<script>
+    window.opener.location = 'welcome.jsp';
+    window.close();
+</script>
 <%
 List<User> users = (List<User>) session.getAttribute("users");
 
@@ -23,12 +28,19 @@ if (users!= null) {
 		}
 	}
 }
-if(found){
-	 response.sendRedirect("success.jsp");
-}
-else{
-	 response.sendRedirect("failure.jsp");
-}
+
+if(found){%>
+<script>
+window.opener.location = 'success.jsp';
+window.close();
+	 </script>
+<%}
+else{%>
+	<script>
+	window.opener.location = 'failure.jsp';
+    window.close();
+	 </script>
+<%}%>
 
    
   
