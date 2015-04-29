@@ -19,7 +19,7 @@
 	href="ui_adornCreations/common_layout/styles/container.css">
 </head>
 
-<body>
+<body class="page">
 
 	<!-- header start from here -->
 	<div class="header">
@@ -38,6 +38,7 @@
 			<div class="rightSideMenu">side product</div>
 		</div>
 	</center>
+
 </body>
 
 </html>

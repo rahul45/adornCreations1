@@ -1,58 +1,81 @@
 @CHARSET "ISO-8859-1";
-.container{
-	//background-color: black;
+
+.container { 
+	background-color:white;
 	width: 80%;
-	height:1000px;
-	content-align:center;
-	border: 2px black solid; 
+	height: 1000px;
+	content-align: center;
+	//border: 2px black solid;
 }
 
-.side_menu{
-	//border: 2px black solid;
+.side_menu {
+	//border: 1px black solid;
 	width: 20%;
-	height:500px;
+	height: 500px;
 	float: left;
 }
-.middle_content{
-	//border: 2px black solid;
+
+.middle_content {
+	//border: 1px black solid;
 	width: 60%;
-	height:500px;
-	float: left;	
+	height: 500px;
+	float: left;
 }
 
-.rightSideMenu{
-	//border: 2px black solid;
-	width:20%;
-	height:500px;
+.rightSideMenu {
+	//border: 0px black solid;
+	width: 20%;
+	height: 500px;
 	float: left;
 }
 /***************************side menu css start from here**************************************************/
-#cssmenu {
-  background: #333;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 12em;
+.sidemenu {
+	width: 90%;
+	height: auto;
 }
-#cssmenu li {
-  font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+
+.sidemenuList00 {
+	list-style: none;
+	width: 180px;
+	align: left;
+	background-color: orange;
+	text-align: left;
+	margin: 0;
+	padding: 0
 }
-#cssmenu a {
-  background: #333;
-  border-bottom: 1px solid #393939;
-  color: #ccc;
-  display: block;
-  margin: 0;
-  padding: 8px 12px;
-  text-decoration: none;
-  font-weight: normal;
+
+.sidemenuList00 a:link,-webkit-any-link {
+	text-decoration: none;
+	background-color: white;
 }
-#cssmenu a:hover {
-  background: #2580a2 url("images/hover.gif") left center no-repeat;
-  color: #fff;
-  padding-bottom: 8px;
+
+.listElement00 {
+	font: 70.5% "Lucida Sans Unicode", "Bitstream Vera Sans",
+		"Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica,
+		sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.listElement00 a {
+	background: #333;
+	border-bottom: 1px solid #393939;
+	color: #ccc;
+	width:90%;
+	display: block;
+	margin: 0;
+	padding: 8px 12px;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.navigationArrow{
+	float: right;
+	height:20px;
+}
+.listElement00 a:hover {
+	background: #2580a2 url("images/hover.gif") left center no-repeat;
+	color: #fff;
+	padding-bottom: 8px;
 }
 /***********************************side menu css end from here**************************************************/

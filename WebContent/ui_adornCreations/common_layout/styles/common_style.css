@@ -15,6 +15,10 @@ body,div {
 	margin-top: 0;
 }
 
+.page{
+	//background-image: url('../images/plumBackgd.png'');
+	background-image: url('../images/light-plum-background.jpg');
+}
 .header {
 	position: relative;
 	background-color: teal; //

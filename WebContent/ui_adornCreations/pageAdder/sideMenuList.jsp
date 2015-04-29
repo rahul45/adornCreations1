@@ -1,11 +1,16 @@
-<div id='sidemenu'>
-
-<ul>
-	<li>Choose Adorn Catagory</li>
-   <li class='active'><a href='#'><span>Hand Made</span></a></li>
-   <li><a href='#'><span>Live Event</span></a></li>
-   <li><a href='#'><span>List 2</span></a></li>
-   <li>level3</li>
-   <li class='last'><a href='#'><span>Contact</span></a></li>
-</ul>
+<div id='sideMenu'>
+	<h3>Choose Adorn Catagory</h3>
+	<ul class="sidemenuList00">
+		<li class='listElement00'><a href='#'><span>Hand Made</span><span class="navigationArrow"> &#10146;</span></a></li>
+		<li class='listElement00'><a href='#'><span>Live Event</span><span class="navigationArrow"> &#10146;</span></a></li>
+		<li class='listElement00'><a href='#'><span>List 2</span><span class="navigationArrow"> &#10146;</span></a></li>
+		<li class='listElement00'><a href='#'><span>Contact</span><span class="navigationArrow"> &#10146;</span></a></li>
+		<li class='listElement00'><a href='#'><span>List 2</span><span class="navigationArrow"> &#10146;</span></a></li>
+		<li class='listElement00'><a href='#'><span>List 2</span><span class="navigationArrow"> &#10146;</span></a></li>
+		<li class='listElement00'><a href='#'><span>List 2</span><span class="navigationArrow"> &#10146;</span></a></li>
+		<li class='listElement00'><a href='#'><span>List 2</span><span class="navigationArrow"> &#10146;</span></a></li>
+		<li class='listElement00'><a href='#'><span>List 2</span><span class="navigationArrow"> &#10146;</span></a></li>
+		<li class='listElement00'><a href='#'><span>List 2</span><span class="navigationArrow"> &#10146;</span></a></li>
+		<li class='listElement00'><a href='#'><span>List 2</span><span class="navigationArrow"> &#x27a2;</span></a></li>
+	</ul>
 </div>
