@@ -21,13 +21,8 @@
 				alt="Slide 3" /> <img
 				src="ui_adornCreations/common_layout/images/slide4.jpg"
 				alt="Slide 4" />
-			
 		</div>
-		
-		
 		<!-- Optional button element. -->
-		
-		
 				<button id="slideShowButton1" ></button>
 				<button id="slideShowButton" ></button>
 </div>

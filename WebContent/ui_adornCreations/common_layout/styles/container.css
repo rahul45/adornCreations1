@@ -3,30 +3,43 @@
 .container { 
 	background-color:white;
 	width: 80%;
-	height: 1000px;
+	opacity: 0.98;
+    filter: alpha(opacity=98); /* For IE8 and earlier */
+	height:1000px;
 	content-align: center;
 	//border: 2px black solid;
 }
-
+.header_tail {
+	position: relative;
+	background-color:plum; //
+	border: 2px black solid;
+	height:30px;
+	width: 100%;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+}
 .side_menu {
 	//border: 1px black solid;
-	width: 20%;
+	width: 18%;
 	height: 500px;
 	float: left;
 }
 
 .middle_content {
 	//border: 1px black solid;
-	width: 60%;
+	width: 50%;
 	height: 500px;
 	float: left;
 }
 
 .rightSideMenu {
-	//border: 0px black solid;
-	width: 20%;
+	//border: 1px black solid;
+	width: 31%;
 	height: 500px;
 	float: left;
+	overflow: scroll;
 }
 /***************************side menu css start from here**************************************************/
 .sidemenu {
@@ -49,18 +62,19 @@
 	background-color: white;
 }
 
-.listElement00 {
+ .listElement00 {
 	font: 70.5% "Lucida Sans Unicode", "Bitstream Vera Sans",
 		"Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica,
 		sans-serif;
 	margin: 0;
+	//background-color:white;
 	padding: 0;
 }
 
 .listElement00 a {
-	background: #333;
+	//background: #333;
 	border-bottom: 1px solid #393939;
-	color: #ccc;
+	color:fuchsia;
 	width:90%;
 	display: block;
 	margin: 0;
@@ -72,10 +86,19 @@
 .navigationArrow{
 	float: right;
 	height:20px;
-}
+} 
 .listElement00 a:hover {
 	background: #2580a2 url("images/hover.gif") left center no-repeat;
 	color: #fff;
 	padding-bottom: 8px;
 }
 /***********************************side menu css end from here**************************************************/
+
+/*********************************RIGHT SIDE PRODUCT LIST ********************************************************/
+.right001Common{
+	border: 2px solid #393939;
+	width:98%;
+	height: 150px; 
+	overflow: scroll;
+}
+/******************************END*********************************************************************************/

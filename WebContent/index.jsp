@@ -25,8 +25,10 @@
 	<div class="header">
 		<%@ include file="/WEB-INF/includes/menubar.jsp"%>
 	</div>
+
 	<center>
 		<div class="container">
+			<div class="header_tail">extra menu for add new items</div>
 			<!--header end from here  -->
 			<div class="side_menu">
 				<%@ include file="/ui_adornCreations/pageAdder/sideMenuList.jsp"%>
@@ -35,7 +37,11 @@
 			<div id="slidshowImagesDiv" class="middle_content">
 				<%@ include file="/ui_adornCreations/core/home.jsp"%>
 			</div>
-			<div class="rightSideMenu">side product</div>
+			<div class="rightSideMenu">
+				<%@ include
+					file="/ui_adornCreations/pageAdder/rightSideProductList.jsp"%>
+
+			</div>
 		</div>
 	</center>
 
