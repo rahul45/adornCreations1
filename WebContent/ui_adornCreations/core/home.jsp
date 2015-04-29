@@ -7,12 +7,13 @@
 <style>
 </style>
 <title>Home</title>
-<script src="ui_adornCreations/core/common.js">
-	
-</script>
+<script src="ui_adornCreations/core/common.js"></script>
+<script src="ui_adornCreations/core/slideshow.js"></script>
+
 </head>
 <body>
 	<center>
+	<div>	
 		<div id="slideShowImages">
 			<img src="ui_adornCreations/common_layout/images/slide2.jpg"
 				alt="Slide 2" /> <img
@@ -20,11 +21,16 @@
 				alt="Slide 3" /> <img
 				src="ui_adornCreations/common_layout/images/slide4.jpg"
 				alt="Slide 4" />
+			
 		</div>
-		<button id="slideShowButton"></button>
+		
+		
 		<!-- Optional button element. -->
-		<script src="ui_adornCreations/core/slideshow.js"></script>
-
+		
+		
+				<button id="slideShowButton1" ></button>
+				<button id="slideShowButton" ></button>
+</div>
 	</center>
 </body>
 </html>

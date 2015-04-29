@@ -9,14 +9,18 @@ function slideShow() {
     fadeDelay: 35, // The time interval between individual opacity changes. This should always be much smaller than slideDelay.  
     wrapperID: "slideShowImages", // The ID of the <div> element that contains all of the <img> elements to be shown as a slide show.
     buttonID: "slideShowButton", // The ID of the <button> element that toggles the slide show on and off.
+    buttonID1: "slideShowButton1",
     buttonStartText: "Start Slides", // Text used in the slide show toggle button.
     buttonStopText: "Stop Slides", // Text used in the slide show toggle button.    
     wrapperObject: null, // Will contain a reference to the <div> element that contains all of the <img> elements to be shown as a slide show.
     buttonObject: null, // If present, will contain a reference to the <button> element that toggles the slide show on and off. The initial assumption is that there is no such button element (hence the false value).
+    buttonObject1: null,
     slideImages: [], // Will contain all of the slide image objects.
     slideShowID: null, // A setInterval() ID value used to stop the slide show.
     slideShowRunning: true, // Used to record when the slide show is running and when it's not. The slide show is always initially running.    
-    slideIndex: 0 // The index of the current slide image.
+    slideIndex: 0, // The index of the current slide image.
+    buttonNextText :">",
+    buttonPrevText :"<",
   }
   
   /* MAIN *************************************************************************************************/
@@ -40,17 +44,20 @@ function slideShow() {
   globals.wrapperObject.addEventListener('click', toggleSlideShow, false); // If the user clicks a slide show image, it toggles the slide show on and off.
   
   if (globals.buttonObject) {
-    globals.buttonObject.addEventListener('click', toggleSlideShow, false); // This callback is used to toggle the slide show on and off.
+    globals.buttonObject.addEventListener('click', transitionSlides, false); // This callback is used to toggle the slide show on and off.
   } 
-  
-  startSlideShow();
+  if (globals.buttonObject1) {
+	    globals.buttonObject1.addEventListener('click', transitionSlides1, false); // This callback is used to toggle the slide show on and off.
+	  } 
+  //startSlideShow();
   
   /* FUNCTIONS ********************************************************************************************/
   
   function initializeGlobals() {   
     globals.wrapperObject = (document.getElementById(globals.wrapperID) ? document.getElementById(globals.wrapperID) : null);
     globals.buttonObject = (document.getElementById(globals.buttonID) ? document.getElementById(globals.buttonID) : null);   
-    
+    globals.buttonObject1 = (document.getElementById(globals.buttonID1) ? document.getElementById(globals.buttonID1) : null);   
+
     if (globals.wrapperObject) {
       globals.slideImages = (globals.wrapperObject.querySelectorAll('img') ? globals.wrapperObject.querySelectorAll('img') : []);
     }
@@ -103,8 +110,12 @@ function slideShow() {
     globals.slideImages[0].style.opacity = 1; // Make the first slide visible.
         
     if (globals.buttonObject) {
-      globals.buttonObject.textContent = globals.buttonStopText;
+      globals.buttonObject.textContent = globals.buttonNextText;
     }
+    
+    if (globals.buttonObject1) {
+        globals.buttonObject1.textContent = globals.buttonPrevText;
+      }
   } // initializeSlideShowMarkup
   
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -144,7 +155,7 @@ function slideShow() {
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   function startSlideShow() {
-    globals.slideShowID = setInterval(transitionSlides, globals.slideDelay);                
+   globals.slideShowID = setInterval(transitionSlides, globals.slideDelay);                
   } // startSlideShow
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -174,12 +185,15 @@ function slideShow() {
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
   function transitionSlides() {
+	  console.log('transitionSlides');
     var currentSlide = globals.slideImages[globals.slideIndex];
-    
-    ++(globals.slideIndex);
-    if (globals.slideIndex >= globals.slideImages.length) {
-      globals.slideIndex = 0;
-    }
+   
+	    ++(globals.slideIndex);
+	    if (globals.slideIndex >= globals.slideImages.length) {
+	      globals.slideIndex = 0;
+	    }
+	
+   
     
     var nextSlide = globals.slideImages[globals.slideIndex];
     
@@ -205,5 +219,41 @@ function slideShow() {
       }        
     } // fadeActiveSlides
   } // transitionSlides
+  
+  function transitionSlides1() {
+	    var currentSlide = globals.slideImages[globals.slideIndex];
+	   
+	    console.log('transitionSlides1');
+	    	 --(globals.slideIndex);
+	 	    if (globals.slideIndex < 0) {
+	 	      globals.slideIndex = globals.slideImages.length - 1 ;
+	 	    }
+	    
+	    
+	    var nextSlide = globals.slideImages[globals.slideIndex];
+	    
+	    var currentSlideOpacity = 1; // Fade the current slide out.
+	    var nextSlideOpacity = 0; // Fade the next slide in.
+	    var opacityLevelIncrement = 1 / globals.fadeDelay;
+	    var fadeActiveSlidesID = setInterval(fadeActiveSlides, globals.fadeDelay);
+	    
+	    function fadeActiveSlides() {
+	      currentSlideOpacity -= opacityLevelIncrement;
+	      nextSlideOpacity += opacityLevelIncrement;
+	      
+	      // console.log(currentSlideOpacity + nextSlideOpacity); // This should always be very close to 1.
+	      
+	      if (currentSlideOpacity >= 0 && nextSlideOpacity <= 1) {
+	        currentSlide.style.opacity = currentSlideOpacity;
+	        nextSlide.style.opacity = nextSlideOpacity; 
+	      }
+	      else {
+	        currentSlide.style.opacity = 0;
+	        nextSlide.style.opacity = 1; 
+	        clearInterval(fadeActiveSlidesID);
+	      }        
+	    } // fadeActiveSlides
+	  } // transitionSlides
+  
   
 } // slideShow
