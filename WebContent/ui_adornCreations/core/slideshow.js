@@ -49,7 +49,7 @@ function slideShow() {
   if (globals.buttonObject1) {
 	    globals.buttonObject1.addEventListener('click', transitionSlides1, false); // This callback is used to toggle the slide show on and off.
 	  } 
-  //startSlideShow();
+  startSlideShow();
   
   /* FUNCTIONS ********************************************************************************************/
   
