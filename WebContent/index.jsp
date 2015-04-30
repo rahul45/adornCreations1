@@ -17,9 +17,10 @@
 	 -->
 <link rel="stylesheet" type="text/css"
 	href="ui_adornCreations/common_layout/styles/container.css">
+	<script src="ui_adornCreations/core/common.js"></script>
 </head>
 
-<body class="page">
+<body class="page" onclick="parent_disable();">
 
 	<!-- header start from here -->
 	<div class="header">
