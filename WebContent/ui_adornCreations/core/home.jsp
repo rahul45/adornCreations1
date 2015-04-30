@@ -7,11 +7,11 @@
 <style>
 </style>
 <title>Home</title>
-<script src="ui_adornCreations/core/common.js"></script>
-<script src="ui_adornCreations/core/slideshow.js"></script>
 
+<script src="ui_adornCreations/core/slideshow.js"></script>
+	
 </head>
-<body>
+<body onclick="parent_disable();">
 	<center>
 	<div>	
 		<div id="slideShowImages">
